@@ -1,0 +1,42 @@
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+#map.has-video-container{ width: 75%;}
+#video-container {
+  background: #eee;
+  transition: all .125s;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  width: 0%;
+}
+#video-container.active {
+  width:25%;
+  border-left: 2px solid #ccc;
+  overflow: scroll;
+}
+
+.right-control{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.right-control.spinner:after {
+  content:'';
+  position:absolute;
+  right:5px;
+  top:50%;
+  border-radius:3px;
+  background: url(spinner.gif) 50% 50% no-repeat;
+  margin:-15px 0 0 -15px;
+  width:30px;
+  height:30px;
+  opacity:0.25;
+}
